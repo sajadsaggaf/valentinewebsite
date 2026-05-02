@@ -19,12 +19,15 @@ pip install -r requirements.txt
 
 ## 2. Running the Backend
 
-Start the FastAPI server using Uvicorn. This will serve the REST API and the WebSocket.
+Start the FastAPI server using Uvicorn. Ensure you are in the **project root directory** (where `requirements.txt` is located).
 
 ```bash
 # From the project root
+export PYTHONPATH=$PYTHONPATH:.
 uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
+
+> **Note**: If you get a `ModuleNotFoundError: No module named 'backend'`, ensure your current working directory contains the `backend/` folder and that you have added the current directory to your `PYTHONPATH` as shown above.
 
 - **API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **WebSocket Endpoint**: `ws://localhost:8000/ws`
