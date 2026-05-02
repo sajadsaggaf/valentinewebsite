@@ -3,4 +3,6 @@ uvicorn[standard]
 pydantic
 opencv-python-headless
 numpy
+requests
+websockets
 # hobot_dnn (Manual installation usually required on RDK X5 via deb/pip from D-Robotics)
